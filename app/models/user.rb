@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :courses ,:dependent=>:delete_all      
   has_many :lects ,:dependent=>:delete_all
-  has_many :comments
+  has_many :comments ,:dependent=>:delete_all
   mount_uploader :image,ImageUploader
 end
