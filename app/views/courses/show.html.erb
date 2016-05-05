@@ -10,7 +10,7 @@
         <tr>
           <th  class="btn-info">courses
         <%= link_to 'Back', courses_path,class:"btn btn-info pull-right a" %>
-        <% if current_user&& @course.user==current_user %>
+        <% if current_user&& @course.user==current_user&&current_user.access_right=="instructor" %>
               <%= link_to 'Add lecture', new_lect_path ,class:"btn btn-info pull-right a"%> 
         <% end %>
         </th>

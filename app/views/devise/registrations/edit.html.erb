@@ -45,6 +45,10 @@
     <%= f.label :gender %><br />
     <%= f.select :gender,options_for_select(['male','female']) %>
   </div>
+   <div class="field ">
+  <%= f.label :access_right %><br/>
+  <%= f.select :access_right,options_for_select(['visitor','instructor']) %>
+</div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

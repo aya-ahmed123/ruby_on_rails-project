@@ -61,6 +61,10 @@
                           <%= f.label :gender,class:"st" %><br/>
                           <%= f.select :gender,options_for_select(['male','female']) %>
                         </div>
+                         <div class="field ">
+                          <%= f.label :access_right,class:"st" %><br/>
+                          <%= f.select :access_right,options_for_select(['visitor','instructor']) %>
+                        </div>
 
                         <div class="field">
                           <%= f.label :password ,class:"st"%>

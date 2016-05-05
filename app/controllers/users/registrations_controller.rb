@@ -43,6 +43,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
      devise_parameter_sanitizer.for(:sign_up) << :name
      devise_parameter_sanitizer.for(:sign_up) << :gender
      devise_parameter_sanitizer.for(:sign_up) << :bdate
+     devise_parameter_sanitizer.for(:sign_up) << :access_right
      devise_parameter_sanitizer.for(:sign_up) << :image
    end
 
