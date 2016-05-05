@@ -1,0 +1,15 @@
+
+<%if current_user&&@course.user.id==current_user.id%>
+
+<h1>Editing Course</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @course %> |
+<%= link_to 'Back', courses_path %>
+
+<%else%>
+	  <div class="alert alert-danger" role="alert">
+		You Don't Have Rights To Access This Page !
+	  </div>
+<% end %>

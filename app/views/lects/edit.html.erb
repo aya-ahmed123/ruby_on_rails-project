@@ -1,0 +1,13 @@
+<%if current_user&&@lect.user.id==current_user.id%>
+<h1>Editing Lect</h1>
+<%= render 'form' %>
+
+<%= link_to 'Show', @lect %> |
+<%= link_to 'Back', :back %>
+
+
+<%else%>
+	  <div class="alert alert-danger" role="alert">
+		You Don't Have Rights To Access This Page !
+	  </div>
+<% end %>
