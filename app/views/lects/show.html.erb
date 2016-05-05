@@ -15,7 +15,7 @@
 
 
   Download:<a href="<%= @lect.attach_url %>" download><%= @lect.attach %></a> <% if current_user&&@lect.user==current_user  %>
-<h4><%= link_to 'Edit', edit_lect_path(@lect) %></h4>
+<h4><%= link_to 'Edit', edit_lect_path(@lect) %>|<%= link_to 'Delete', lects_path %></h4>
      
 <% end %></pre>
   <%= link_to like_lect_path(@lect) , method: :put do %>
