@@ -28,9 +28,9 @@
           <span class=" info glyphicon glyphicon-thumbs-down glyphicon-align-center "> </span>
           <span class="badge"><%= @lect.get_downvotes.size %></span>
     </button>
-    <%if  @lect.get_downvotes.size==2%>
+<!--     if disliks becoms 2 , lecture becomes span
+ -->    <%if  @lect.get_downvotes.size==1%>
      <% Lect.destroy(@lect.id)%>
-     <%render "courses/index"%>
       <%end%>
  <% end  %>
  
