@@ -10,7 +10,7 @@ class LectsController < InheritedResources::Base
 
        respond_to do |format|
 	    if @lect.save
-	        format.html { redirect_to @lect, notice: 'lecture created.' }
+	        format.html { redirect_to @lect}
 	        format.json { render :show, status: :created, location: @lect }
 	      else
 	        format.html { render :new }

@@ -1,5 +1,4 @@
-
-<p id="notice"><%= notice %></p>
+<div class="container">
 
   <%if  flash[:danger] %>
   <div class="alert alert-danger" role="alert">
@@ -7,7 +6,7 @@
   </div>
   <%end%>
   </p>
-  <div class="jumbotron col-md-8">
+  <div class="jumbotron col-md-8 col-md-offset-2">
   <pre>
   <%= @lect.title %>
 
@@ -38,9 +37,9 @@
 
 </div>
 
-<div class="col-md-4"></div>
+<div class="col-md-2"></div>
 
-<div class="jumbotron col-md-8">
+<div class="jumbotron col-md-8 col-md-offset-2">
 <h2> Leave comment </h2>
       <%= simple_form_for [@lect ,Comment.new] do |f| %>
        <p>
@@ -53,6 +52,6 @@
 
    
    </div> 
-    <div class="jumbotron col-md-8">
+    <div class="jumbotron col-md-8 col-md-offset-2">
         <h4><%= link_to 'Back', course_path(@lect.course.id) %></h4>
-    </div>
+    </div></div>

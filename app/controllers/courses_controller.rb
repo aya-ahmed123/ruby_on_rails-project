@@ -8,7 +8,7 @@ class CoursesController < InheritedResources::Base
 
        respond_to do |format|
 	    if @course.save
-	        format.html { redirect_to @course, notice: 'course created.' }
+	        format.html { redirect_to @course }
 	        format.json { render :show, status: :created, location: @course }
 	      else
 	        format.html { render :new }
